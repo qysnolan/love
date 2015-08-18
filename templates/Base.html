@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     <title>
-		Yunsheng & Mengnan
+		LOVE - {% block page-title %}{% endblock %}
 	</title>
     
     {% block global-css %}
@@ -33,26 +33,27 @@
             <div class="cover-container">
                 <div class="masthead clearfix">
                     <div class="inner">
-                        <h3 class="masthead-brand">LOVE</h3>
+                        <h2 class="masthead-brand">LOVE</h2>
                         <nav>
                             <ul class="nav masthead-nav">
                                 <li><a href="{% url 'love.views.home' %}">Home</a></li>
-                                <li><a href="#">Wedding</a></li>
-                                <li><a href="#">Photo</a></li>
+                                <li><a href="{% url 'wedding.views.home' %}">Wedding</a></li>
+                                <li><a href="{% url 'photo.views.home' %}">Photo</a></li>
                                 <li><a href="{% url 'menu.views.home' %}">Menu</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
 
-                <div class="content">
+                <div class="content cover-content">
                     {% block content %}{% endblock %}
                 </div>
 
                 <div class="mastfoot">
-                    <div class="inner">
-                        <p><a href="#">Contact</a>  Site created by Yunsheng Qi</p>
-                    </div>
+                    <a href="/contact/">Contact</a>
+                    <span> &middot; </span>
+                    <a href="/contact/">Follow us</a>
+                    <p>Site created by Yunsheng Qi</p>
                 </div>
             </div>
         </div>
