@@ -10,5 +10,9 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^home/', 'love.views.home', name='home'),
+    url(r'^wedding/', 'wedding.views.home', name='wedding'),
+    url(r'^photo/', 'photo.views.home', name='photo'),
     url(r'^menu/', 'menu.views.home', name='menu'),
+
+    url(r'^contact/', RedirectView.as_view(pattern_name='home'), name='contact'),
 ]

@@ -3,4 +3,4 @@ from django.shortcuts import render_to_response
 
 def home(request):
 
-    return render_to_response('menu.html')
+    return render_to_response('photo.html')
