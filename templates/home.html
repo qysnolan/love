@@ -10,10 +10,10 @@
 
 {% block content %}
     <div class="inner cover center cover-middle">
-        <h1 class="cover-heading">Cover your page.</h1>
-        <p class="">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+        <h1 class="cover-heading text-capitalize">We are getting married!</h1>
+        <p class="home_content">After 6 years, we are getting married!</p>
         <p class="lead">
-            <a href="#" class="btn btn-sm btn-default">Learn more</a>
+            <a href="{% url 'wedding.views.home' %}" class="btn btn-sm btn-default">Learn more</a>
         </p>
     </div>
 {% endblock %}
