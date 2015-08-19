@@ -1,0 +1,24 @@
+{% extends "Base.html" %}
+
+{% block page-title %}
+    Our Wedding
+{% endblock %}
+
+{% block page-css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/wedding.css" />
+{% endblock %}
+
+{% block page-js %}
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="inner cover center">
+        <h2 class="cover-heading">Our Wedding</h2>
+        <br/>
+        <p class="font-big">Victoria International Hotel <br/> Tientsin, China </p>
+        <p class="font-big">11:00 am <br/> December 20th, 2015</p>
+        <div id="dituContent" class="map_frame"></div>
+    </div>
+    <script type="text/javascript" src="/static/js/baidu_map.js"></script>
+{% endblock %}
