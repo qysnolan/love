@@ -29,13 +29,13 @@ var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,
     type:BMAP_NAVIGATION_CONTROL_LARGE});
 map.addControl(ctrl_nav);
     //向地图中添加缩略图控件
-var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:0});
+var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
 map.addControl(ctrl_ove);
     }
 
 //标注点数组
 var markerArr = [{title:"<a href=\"http://victoria-tianjin.hotel.com.tw/\" style=\"color: orangered\" target=\"_blank\">Victoria&nbsp;International&nbsp;Hotel<br/>维多利亚国际大酒店</a>",
-    content:"<a href=\"http://j.map.baidu.com/sP7o5\" style=\"color: #000000\" target=\"_blank\">Zhongshan&nbsp;Road,&nbsp;Hebei,&nbsp;Tianjin,&nbsp;China<br/>天津市河北区中山路<br/>300142</a>",
+    content:"<a href=\"http://j.map.baidu.com/sP7o5\" style=\"color: #000000\" target=\"_blank\">66 Zhongshan&nbsp;Road,&nbsp;Hebei,&nbsp;Tianjin,&nbsp;China<br/>天津市河北区中山路66号</a><br/>300142<br/>+86-22-86340088",
     point:"117.210948|39.168765",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
      ];
 //创建marker

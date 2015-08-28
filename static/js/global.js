@@ -1,10 +1,46 @@
+// Make the current url active
 $(document).ready(function()  {
     /* SHOW ACTIVE TAB AND MAINTAIN CORRECT SIZE */
-    $('ul.nav a').filter(function() {
+    $('.sidebar-nav li a').filter(function() {
         return window.location.toString().indexOf(this.href.toString()) != -1;
-    }).parent().addClass('active');
+    }).parent().addClass('current');
 });
 
+// Toogle the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+$('#scrollup').click(function () {
+    $("html, body").animate({
+        scrollTop: 0
+    }, 600);
+    return false;
+});
+
+// Scrolls to the selected menu item on the page
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+
+// Google translate
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
             pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
