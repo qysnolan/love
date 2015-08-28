@@ -8,55 +8,79 @@
     <link rel="stylesheet" type="text/css" href="/static/css/menu.css" />
 {% endblock %}
 
+{% block navbar %}
+    <li>
+        <a href="#starter" onclick = $("#menu-close").click(); >Starter</a>
+    </li>
+    <li>
+        <a href="#entree" onclick = $("#menu-close").click(); >Entree</a>
+    </li>
+    <li>
+        <a href="#dessert" onclick = $("#menu-close").click(); >Dessert</a>
+    </li>
+{% endblock %}
+
 {% block content %}
-    <div class="inner cover">
-        <p class="lead" id="menu_title">Under Construction</p>
-        <p>
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Our Private Kitchen</h1>
+            <h3>This page is under construction.</h3>
+            <br>
+            <a href="#about" class="btn btn-light btn-lg">Find Out More</a>
+        </div>
+    </header>
 
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
+                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
 
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
+    <!-- Wedding Intro Video -->
+    <section id="starter" class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Starter</h2>
+                    <hr class="small">
+                    <img class="video_frame" src="/static/img/portfolio-4.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
 
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
+    <!-- Wedding Intro Video -->
+    <section id="entree" class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Entree</h2>
+                    <hr class="small">
+                    <img class="video_frame" src="/static/img/portfolio-4.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
 
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-
-            Easily make tabs or pills equal widths of their parent at screens wider than 768px with .nav-justified. On smaller screens, the nav links are stacked.
-        </p>
-    </div>
+    <!-- Wedding Intro Video -->
+    <section id="dessert" class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Dessert</h2>
+                    <hr class="small">
+                    <img class="video_frame" src="/static/img/portfolio-4.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Yunsheng & Mengnan's Wedding">
+    <meta name="author" content="Yunsheng Qi">
 
     <title>
 		LOVE - {% block page-title %}{% endblock %}
@@ -14,8 +13,8 @@
     
     {% block global-css %}
         <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="/static/css/global.css" />
+        <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     {% endblock %}
     
 	{% block page-css %}{% endblock %}
@@ -23,63 +22,93 @@
     <script type="text/javascript" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/js/angular.min.js"></script>
-    <script type="text/javascript" src="/static/js/global.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="icon" href="/static/img/love.png">
 
 	{% block page-js %}{% endblock %}
 </head>
 <body>
-    <div class="site-wrapper">
-        <div class="site-wrapper-inner">
-            <div class="cover-container">
-                <div class="masthead clearfix">
-                    <div class="inner">
-                        <h2 class="masthead-brand">LOVE</h2>
-                        <nav>
-                            <ul class="nav masthead-nav">
-                                <li><a href="{% url 'love.views.home' %}">Home</a></li>
-                                <li><a href="{% url 'wedding.views.home' %}">Wedding</a></li>
-                                <li><a href="{% url 'photo.views.home' %}">Photo</a></li>
-                                <li><a href="{% url 'menu.views.home' %}">Menu</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
 
-                <div class="content cover-content">
-                    {% block content %}{% endblock %}
-                </div>
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-dark btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand toggle">
+                <a href="{% url 'home' %}"  onclick = $("#menu-close").click();>LOVE</a>
+            </li>
+            <hr class="small">
+            <li>
+                <a href="{% url 'home' %}" class="abc" onclick = $("#menu-close").click(); >Home <i class="fa fa-home"></i></a>
+            </li>
+            <li>
+                <a href="{% url 'wedding' %}" onclick = $("#menu-close").click();>Wedding <i class="fa fa-heart"></i></a>
+            </li>
+            <li>
+                <a href="{% url 'photo' %}" onclick = $("#menu-close").click();>Photo <i class="fa fa-camera"></i></a>
+            </li>
+            <li>
+                <a href="{% url 'menu' %}" onclick = $("#menu-close").click();>Kitchen <i class="fa fa-cutlery"></i></a>
+            </li>
+            <hr class="small">
+            {% block navbar %}{% endblock %}
+            <hr class="small">
+            <li>
+                <a id="scrollup" href="#to_top" onclick = $("#menu-close").click();>To Top <i class="fa fa-arrow-up"></i></a>
+            </li>
+        </ul>
+    </nav>
 
-                <div class="mastfoot">
-                    <a href="/contact/">Contact</a>
-                    <span> &middot; </span>
-                    <a href="/contact/">Follow us</a>
-                    <span> &middot; </span>
-                    <div class="dropup lang-dropdown">
-                        <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="language"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Language <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="language">
-                            <li><a href="#" class="btn btn-default btn-sm">Chinese(Simplified)/简体中文</a></li>
-                            <li><a href="#" class="btn btn-default btn-sm">English(US)/英语</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropup lang-dropdown">
-                        <button class="btn btn-default btn-sm dropdown-toggle" onclick="$('.goog-te-gadget-simple').click()"
-                                data-event-trigger="click" data-event-category="social" data-event-action="click"
-                                data-event-label="Translate">
-                            <i class="icon-globe"></i> Translate
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu pull-right">
-                          <li><div id="google_translate_element"></div></li>
-                        </ul>
-                    </div>
-                    <p>Site created by Yunsheng Qi</p>
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4 class="text-primary"><strong>LOVE</strong>
+                    </h4>
+                    <p>Yunsheng Qi &amp; Mengnan Zhao</p>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:qysnolan@gmail.com">qysnolan@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:tinazhao1022@gmail.com">tinazhao1022@gmail.com</a>
+                        </li>
+                        <li>
+                            <div id="google_translate_element"></div>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x text-primary"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x text-primary"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x text-primary"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; LOVE 2015</p>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
+
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/static/js/global.js"></script>
+
 </body>
 </html>
 
