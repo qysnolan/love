@@ -1,4 +1,5 @@
 {% extends "Base.html" %}
+{% load i18n %}
 
 {% block page-title %}
     Our Private Kitchen
@@ -10,27 +11,17 @@
 
 {% block navbar %}
     <li>
-        <a href="#starter" onclick = $("#menu-close").click(); >Starter</a>
+        <a href="#starter" onclick = $("#menu-close").click(); >{% trans "Starter" %}</a>
     </li>
     <li>
-        <a href="#entree" onclick = $("#menu-close").click(); >Entree</a>
+        <a href="#entree" onclick = $("#menu-close").click(); >{% trans "Entree" %}</a>
     </li>
     <li>
-        <a href="#dessert" onclick = $("#menu-close").click(); >Dessert</a>
+        <a href="#dessert" onclick = $("#menu-close").click(); >{% trans "Dessert" %}</a>
     </li>
 {% endblock %}
 
 {% block content %}
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Our Private Kitchen</h1>
-            <h3>This page is under construction.</h3>
-            <br>
-            <a href="#about" class="btn btn-light btn-lg">Find Out More</a>
-        </div>
-    </header>
-
     <!-- About -->
     <section id="about" class="about">
         <div class="container">
@@ -50,7 +41,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Starter</h2>
+                    <h2>{% trans "Starter" %}</h2>
                     <hr class="small">
                     <img class="video_frame" src="/static/img/portfolio-4.jpg">
                 </div>
@@ -63,7 +54,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Entree</h2>
+                    <h2>{% trans "Entree" %}</h2>
                     <hr class="small">
                     <img class="video_frame" src="/static/img/portfolio-4.jpg">
                 </div>
@@ -76,7 +67,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Dessert</h2>
+                    <h2>{% trans "Dessert" %}</h2>
                     <hr class="small">
                     <img class="video_frame" src="/static/img/portfolio-4.jpg">
                 </div>

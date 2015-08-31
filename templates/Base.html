@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,22 +47,32 @@
             </li>
             <hr class="small">
             <li>
-                <a href="{% url 'home' %}" class="abc" onclick = $("#menu-close").click(); >Home <i class="fa fa-home"></i></a>
+                <a href="{% url 'home' %}" onclick = $("#menu-close").click(); >
+                    {% trans "Home" %} <i class="fa fa-home"></i>
+                </a>
             </li>
             <li>
-                <a href="{% url 'wedding' %}" onclick = $("#menu-close").click();>Wedding <i class="fa fa-heart"></i></a>
+                <a href="{% url 'wedding' %}" onclick = $("#menu-close").click();>
+                    {% trans "Wedding" %} <i class="fa fa-heart"></i>
+                </a>
             </li>
             <li>
-                <a href="{% url 'photo' %}" onclick = $("#menu-close").click();>Photo <i class="fa fa-camera"></i></a>
+                <a href="{% url 'photo' %}" onclick = $("#menu-close").click();>
+                    {% trans "Photo" %} <i class="fa fa-camera"></i>
+                </a>
             </li>
             <li>
-                <a href="{% url 'menu' %}" onclick = $("#menu-close").click();>Kitchen <i class="fa fa-cutlery"></i></a>
+                <a href="{% url 'menu' %}" onclick = $("#menu-close").click();>
+                    {% trans "Kitchen" %} <i class="fa fa-cutlery"></i>
+                </a>
             </li>
             <hr class="small">
             {% block navbar %}{% endblock %}
             <hr class="small">
             <li>
-                <a id="scrollup" href="#to_top" onclick = $("#menu-close").click();>To Top <i class="fa fa-arrow-up"></i></a>
+                <a id="scrollup" href="#to_top" onclick = $("#menu-close").click();>
+                    {% blocktrans %}To Top{% endblocktrans %} <i class="fa fa-arrow-up"></i>
+                </a>
             </li>
         </ul>
     </nav>
@@ -75,7 +86,7 @@
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h4 class="text-primary"><strong>LOVE</strong>
                     </h4>
-                    <p>Yunsheng Qi &amp; Mengnan Zhao</p>
+                    <p>{% blocktrans %}Yunsheng Qi &amp; Mengnan Zhao{% endblocktrans %}</p>
                     <ul class="list-unstyled">
                         <li>
                             <i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:qysnolan@gmail.com">qysnolan@gmail.com</a>
@@ -100,7 +111,7 @@
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; LOVE 2015</p>
+                    <p class="text-muted">{% trans "Copyright" %} &copy; LOVE 2015</p>
                 </div>
             </div>
         </div>

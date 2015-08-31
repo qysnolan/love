@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-31 02:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/Base.html:51
+msgid "Home"
+msgstr "主页"
+#: templates/Base.html:56
+msgid "Wedding"
+msgstr "婚礼"
+#: templates/Base.html:61
+msgid "Photo"
+msgstr "照片"
+#: templates/Base.html:66
+msgid "Kitchen"
+msgstr "私房菜"
+#: templates/Base.html:74
+msgid "To Top"
+msgstr "回到顶部"
+#: templates/Base.html:89
+msgid "Yunsheng Qi &amp; Mengnan Zhao"
+msgstr "齐云生 &amp; 赵梦楠"
+#: templates/Base.html:114
+msgid "Copyright"
+msgstr "版权所有"
+#: templates/home.html:17
+msgid "About"
+msgstr "关于"
+#: templates/home.html:21
+msgid "Our Website"
+msgstr "我们的网站"
+#: templates/home.html:24
+msgid "Our Photos"
+msgstr "我们的影像"
+#: templates/home.html:27
+msgid "Wedding Info"
+msgstr "婚礼信息"
+#: templates/home.html:36
+msgid "After 6 years, we are getting married!"
+msgstr "经过六年的爱情长跑，我们结婚啦！"
+#: templates/home.html:38
+msgid "Find Out More"
+msgstr "了解更多"
+#: templates/home.html:74
+msgid "Learn More"
+msgstr "了解更多"
+#: templates/home.html:84
+msgid "Our Wedding"
+msgstr "我们的婚礼"
+#: templates/home.html:97
+msgid "Photo &amp; Video"
+msgstr "照片和视频"
+#: templates/home.html:110
+msgid "Private Kitchen"
+msgstr "私房菜"
+#: templates/home.html:164
+msgid "View More Photos"
+msgstr "欣赏更多照片"
+#: templates/home.html:177
+msgid "Victoria International Hotel"
+msgstr "维多利亚国际大酒店"
+#: templates/home.html:177
+msgid "Tientsin, China"
+msgstr "中国天津"
+#: templates/home.html:178
+msgid "December 20th, 2015"
+msgstr "2015年12月20日"
+#: templates/home.html:182
+msgid "Leave A Message"
+msgstr "送上祝福"
+#: templates/home.html:192
+msgid "How will our wedding look like?"
+msgstr "我们的婚礼是什么样的？"
+#: templates/home.html:5
+msgid "Yunsheng &amp; Mengnan"
+msgstr "云生 &amp; 梦楠"
+#: templates/wedding.html:22
+msgid "Intro Video"
+msgstr "介绍视频"
+#: templates/wedding.html:25
+msgid "View Maps"
+msgstr "查看地图"
+#: templates/wedding.html:46
+msgid "Best blessing from relatives and friends."
+msgstr "来自亲朋好友们的祝福。"
+#: templates/wedding.html:52
+msgid "Read More"
+msgstr "阅读更多祝福"
+#: templates/menu.html:13
+msgid "Starter"
+msgstr "头牌"
+#: templates/menu.html:17
+msgid "Entree"
+msgstr "主菜"
+#: templates/menu.html:20
+msgid "Dessert"
+msgstr "甜点"

@@ -82,7 +82,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh'
 
 TIME_ZONE = 'UTC'
 
@@ -104,4 +104,8 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+)
+
+LOCALE_PATHS = (
+    os.path.abspath(os.path.join(SITE_ROOT, 'locale/')),
 )
