@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block page-css %}
+    <link rel="stylesheet" type="text/css" href="/static/css/lightbox.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/photo.css" />
 {% endblock %}
 
@@ -33,44 +34,70 @@
     <section id="our_photos" class="portfolio">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/static/img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/static/img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/static/img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/static/img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">{% blocktrans %}View More Photos{% endblocktrans %}</a>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-1.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-1.jpg" alt="">
+                    </a>
                 </div>
-                <!-- /.col-lg-10 -->
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-2.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-3.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-4.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-5.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-5.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-7.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-7.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-8.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-8.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-9.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive" src="/static/img/photos/photo-9.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-10.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-10.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-11.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-11.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-12.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-12.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="/static/img/photos/photo-13.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
+                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-13.jpg" alt="">
+                    </a>
+                </div>
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /.container -->
     </section>
+
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/static/js/lightbox.js"></script>
 {% endblock %}
