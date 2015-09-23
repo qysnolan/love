@@ -1,7 +1,8 @@
 {% extends "Base.html" %}
+{% load i18n %}
 
 {% block page-title %}
-    Yunsheng & Mengnan
+    {% blocktrans %}Yunsheng &amp; Mengnan{% endblocktrans %}
 {% endblock %}
 
 {% block page-css %}
@@ -14,16 +15,16 @@
 
 {% block navbar %}
     <li>
-        <a href="#about" onclick = $("#menu-close").click(); >About</a>
+        <a href="#about" onclick = $("#menu-close").click(); >{% trans "About" %}</a>
     </li>
     <li>
-        <a href="#our_website" onclick = $("#menu-close").click(); >Our Website</a>
+        <a href="#our_website" onclick = $("#menu-close").click(); >{% blocktrans %}Our Website{% endblocktrans %}</a>
     </li>
     <li>
-        <a href="#our_photos" onclick = $("#menu-close").click(); >Our Photos</a>
+        <a href="#our_photos" onclick = $("#menu-close").click(); >{% blocktrans %}Our Photos{% endblocktrans %}</a>
     </li>
     <li>
-        <a href="#wedding_info" onclick = $("#menu-close").click(); >Wedding Info</a>
+        <a href="#wedding_info" onclick = $("#menu-close").click(); >{% blocktrans %}Wedding Info{% endblocktrans %}</a>
     </li>
 {% endblock %}
 
@@ -32,9 +33,9 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>LOVE</h1>
-            <h3>After 6 years, we are getting married!</h3>
+            <h3>{% blocktrans %}After 6 years, we are getting married!{% endblocktrans %}</h3>
             <br>
-            <a href="#about" class="btn btn-light btn-lg">Find Out More</a>
+            <a href="#about" class="btn btn-light btn-lg">{% blocktrans %}Find Out More{% endblocktrans %}</a>
         </div>
     </header>
 
@@ -57,7 +58,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Our Website</h2>
+                    <h2>{% blocktrans %}Our Website{% endblocktrans %}</h2>
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -67,10 +68,10 @@
                                 <i class="fa fa-home fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Home</strong>
+                                    <strong>{% trans "Home" %}</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="{% url 'home' %}" class="btn btn-light">Learn More</a>
+                                <a href="{% url 'home' %}#about" class="btn btn-light">{% blocktrans %}Learn More{% endblocktrans %}</a>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -80,10 +81,10 @@
                                 <i class="fa fa-heart fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Our Wedding</strong>
+                                    <strong>{% blocktrans %}Our Wedding{% endblocktrans %}</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="{% url 'wedding' %}" class="btn btn-light">Learn More</a>
+                                <a href="{% url 'wedding' %}" class="btn btn-light">{% blocktrans %}Learn More{% endblocktrans %}</a>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -93,10 +94,10 @@
                                 <i class="fa fa-camera fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Photo &amp; Video</strong>
+                                    <strong>{% blocktrans %}Photo &amp; Video{% endblocktrans %}</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="{% url 'photo' %}" class="btn btn-light">Learn More</a>
+                                <a href="{% url 'photo' %}" class="btn btn-light">{% blocktrans %}Learn More{% endblocktrans %}</a>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -106,10 +107,10 @@
                                 <i class="fa fa-cutlery fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Private Kitchen</strong>
+                                    <strong>{% blocktrans %}Private Kitchen{% endblocktrans %}</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="{% url 'menu' %}" class="btn btn-light">Learn More</a>
+                                <a href="{% url 'menu' %}" class="btn btn-light">{% blocktrans %}Learn More{% endblocktrans %}</a>
                             </div>
                         </div>
                     </div>
@@ -127,40 +128,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Photos</h2>
+                    <h2>{% blocktrans %}Our Photos{% endblocktrans %}</h2>
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/static/img/portfolio-1.jpg">
+                                    <img class="img-portfolio img-responsive" src="/static/img/cover-1.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/static/img/portfolio-2.jpg">
+                                    <img class="img-portfolio img-responsive" src="/static/img/cover-2.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/static/img/portfolio-3.jpg">
+                                    <img class="img-portfolio img-responsive" src="/static/img/cover-3.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/static/img/portfolio-4.jpg">
+                                    <img class="img-portfolio img-responsive" src="/static/img/cover-4.jpg">
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="{% url 'photo' %}" class="btn btn-dark">View More Photos</a>
+                    <a href="{% url 'photo' %}" class="btn btn-dark">{% blocktrans %}View More Photos{% endblocktrans %}</a>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -172,13 +173,13 @@
     <!-- Wedding Info -->
     <section id="wedding_info" class="callout">
         <div class="text-vertical-center">
-            <h1>Wedding</h1>
-            <h4>Victoria International Hotel <br/> Tientsin, China </h4>
-            <h4>11:00 am <br/> December 20th, 2015</h4>
+            <h1>{% trans "Wedding" %}</h1>
+            <h4>{% blocktrans %}Victoria International Hotel{% endblocktrans %} <br/> {% blocktrans %}Tientsin, China{% endblocktrans %} </h4>
+            <h4>11:00 am <br/> {% blocktrans %}December 20th, 2015{% endblocktrans %}</h4>
             <br/>
             <div class="col-lg-12 text-center">
-                <a href="{% url 'wedding' %}" class="btn btn-light">Find Out More</a>
-                <a href="{% url 'wedding' %}" class="btn btn-light">Leave A Message</a>
+                <a href="{% url 'wedding' %}" class="btn btn-light">{% blocktrans %}Find Out More{% endblocktrans %}</a>
+                <a href="{% url 'wedding' %}" class="btn btn-light">{% blocktrans %}Leave A Message{% endblocktrans %}</a>
             </div>
         </div>
     </section>
@@ -188,7 +189,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>How will our wedding look like?</h2>
+                    <h2>{% blocktrans %}How will our wedding look like?{% endblocktrans %}</h2>
                     <hr class="small">
                     <img class="video_frame" src="/static/img/portfolio-4.jpg">
                 </div>
