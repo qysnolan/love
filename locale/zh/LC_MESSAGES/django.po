@@ -110,3 +110,12 @@ msgstr "主菜"
 #: templates/menu.html:20
 msgid "Dessert"
 msgstr "甜点"
+#: templates/photo.html:30
+msgid "Our Video"
+msgstr "我们的视频"
+#: templates/photo.html:44
+msgid "Youku"
+msgstr "优酷"
+#: templates/photo.html:45
+msgid "Youtube"
+msgstr "油管"

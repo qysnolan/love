@@ -1,0 +1,36 @@
+<div class="center" ng-show="photos != null" >
+    <button class="btn btn-dark btn-lg" ng-show="allDataLoaded==true || totalPages==1" disabled>
+        All photos are loaded
+    </button>
+    <button class="btn btn-dark btn-lg" ng-show="next!=null" ng-click="loadPhotos(next)">
+        Load more photos
+    </button>
+</div>
+
+<dl class="row">
+    <dd ng-repeat="photo in photos" >
+        <div class="col-sm-6 col-md-3">
+            <a href="{{ photo.path }}" data-lightbox="roadtrip" data-title="{{ photo.description }}" class="thumbnail">
+                <img class="img-portfolio img-responsive img-photo" src="{{ photo.path }}" alt="{{ photo.title }}">
+            </a>
+        </div>
+    </dd>
+</dl>
+
+<div class="center" ng-show="photos != null" >
+    <button class="btn btn-dark btn-lg" ng-show="allDataLoaded==true || totalPages==1" disabled>
+        All photos are loaded
+    </button>
+    <button class="btn btn-dark btn-lg" ng-show="next!=null" ng-click="loadPhotos(next)">
+        Load more photos
+    </button>
+    <button class="btn btn-dark btn-lg" ng-show="count == 0" disabled>
+        Sorry, no photo is found...
+    </button>
+</div>
+
+<div class="center" ng-show="photos==null || allDataLoading==true">
+    <h2>
+        <i class="fa fa-refresh fa-large fa-spin"></i> Loading data...
+    </h2>
+</div>
