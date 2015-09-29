@@ -18,3 +18,24 @@ photoApp.config(['$routeProvider',
                 redirectTo: '/'
             });
     }]);
+
+var menuApp = angular.module('menuApp', [
+    'ngRoute',
+    'ngCookies',
+    'menuControllers',
+    'menuFilters',
+    'menuServices',
+    'filters'
+]);
+
+menuApp.config(['$routeProvider',
+    function($routeProvider) {
+        $routeProvider.
+            when('/', {
+                templateUrl: '/static/app/views/menu_list.html',
+                controller: 'MenuListCtrl'
+            }).
+            otherwise({
+                redirectTo: '/'
+            });
+    }]);

@@ -42,5 +42,6 @@ class ApiRouter(routers.DefaultRouter):
 router = ApiRouter()
 
 router.register(r"photos", views.PhotoViewSet)
+router.register(r"menus", views.MenuViewSet)
 
 urlpatterns = router.urls

@@ -6,6 +6,7 @@ class Photo(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     path = models.ImageField(upload_to='photos')
+    isActive = models.BooleanField(default=True)
     last_update = models.DateTimeField(auto_now=True)
 
     class Meta:
