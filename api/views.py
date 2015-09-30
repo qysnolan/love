@@ -16,7 +16,7 @@ class PhotoViewSet(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
     def get_queryset(self):
         photos = Photo.objects.all().filter(isActive=True)
 
-        return photos.order_by('photo_id', 'title')
+        return photos.order_by('title', 'photo_id')
 
     def filter_queryset(self, queryset):
         queryset = super(PhotoViewSet, self).filter_queryset(queryset)
@@ -38,7 +38,7 @@ class PhotoViewSet(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
 
 
 class MenuViewSet(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
-                     mixins.ListModelMixin, viewsets.GenericViewSet):
+                  mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Menu.objects.none()
 
     serializer_class = MenuSerializer
@@ -48,7 +48,7 @@ class MenuViewSet(mixins.RetrieveModelMixin, mixins.UpdateModelMixin,
     def get_queryset(self):
         starters = Menu.objects.all().filter(isActive=True)
 
-        return starters.order_by('menu_id', 'title')
+        return starters.order_by('title', 'menu_id')
 
     def filter_queryset(self, queryset):
         queryset = super(MenuViewSet, self).filter_queryset(queryset)

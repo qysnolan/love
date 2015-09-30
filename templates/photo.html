@@ -23,6 +23,13 @@
     <script src="/static/app/filters/photo_filters.js"></script>
     <script src="/static/app/services/photo_services.js"></script>
     <!-- endbuild -->
+
+    <script type="text/javascript">
+        var load_more_photos = "{% trans "Load more photos" %}";
+        var all_photos_are_loaded = "{% trans "All photos are loaded" %}";
+        var no_photo_found = "{% trans "Sorry, no photo is found..." %}";
+        var loading_photos = "{% trans "Loading photos..." %}";
+    </script>
 {% endblock %}
 
 {% block navbar %}
@@ -40,7 +47,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>Watch our WEDDING INTRO video.</h3>
+                    <h3>{% blocktrans %}Watch our WEDDING INTRO video.{% endblocktrans %}</h3>
                     <a href="#" class="btn btn-light"><i class="fa fa-video-camera"></i> {% trans "Youku" %}</a>
                     <a href="#" class="btn btn-light"><i class="fa fa-youtube-play"></i> {% trans "Youtube" %}</a>
                 </div>

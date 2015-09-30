@@ -12,6 +12,10 @@ menuControllers.controller('MenuListCtrl', function ($scope, $http) {
         $http.get(base_url+'3').success(function(data) {
             $scope.desserts = data.results;
         });
+        $scope.starter_name = starter_name;
+        $scope.entree_name = entree_name;
+        $scope.dessert_name = dessert_name;
+        $scope.loading_data = loading_data;
     };
 
     initiation();

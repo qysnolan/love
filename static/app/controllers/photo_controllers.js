@@ -28,6 +28,10 @@ photoControllers.controller('PhotoListCtrl', function ($scope, $http) {
         $scope.allDataLoaded = false;
         $scope.allDataLoading = false;
         $scope.query = null;
+        $scope.load_more_photos = load_more_photos;
+        $scope.all_photos_are_loaded = all_photos_are_loaded;
+        $scope.no_photo_found = no_photo_found;
+        $scope.loading_photos = loading_photos;
     };
 
     initiation();

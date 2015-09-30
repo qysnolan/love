@@ -23,6 +23,13 @@
     <script src="/static/app/filters/menu_filters.js"></script>
     <script src="/static/app/services/menu_services.js"></script>
     <!-- endbuild -->
+
+    <script type="text/javascript">
+        var starter_name = "{% trans "Starter" %}";
+        var entree_name = "{% trans "Entree" %}";
+        var dessert_name = "{% trans "Dessert" %}";
+        var loading_data = "{% trans "Loading data..." %}";
+    </script>
 {% endblock %}
 
 {% block navbar %}
@@ -43,8 +50,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                    <h2>{% blocktrans %}Private Cuisine{% endblocktrans %}</h2>
+                    <p class="lead">{% blocktrans %}Simple not plain, delicate not complicated{% endblocktrans %}</p>
                 </div>
             </div>
             <!-- /.row -->

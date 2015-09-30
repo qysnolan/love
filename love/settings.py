@@ -56,6 +56,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
 )
 
 ROOT_URLCONF = 'love.urls'
@@ -98,6 +101,13 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
 LANGUAGE_CODE = 'zh'
+
+ugettext = lambda s: s
+
+LANGUAGES = (
+    ('zh', ugettext('Chinese')),
+    ('en', ugettext('English')),
+)
 
 TIME_ZONE = 'UTC'
 
