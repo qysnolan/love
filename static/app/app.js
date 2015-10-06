@@ -39,3 +39,24 @@ menuApp.config(['$routeProvider',
                 redirectTo: '/'
             });
     }]);
+
+var commentApp = angular.module('commentApp', [
+    'ngRoute',
+    'ngCookies',
+    'commentControllers',
+    'commentFilters',
+    'commentServices',
+    'filters'
+]);
+
+commentApp.config(['$routeProvider',
+    function($routeProvider) {
+        $routeProvider.
+            when('/', {
+                templateUrl: '/static/app/views/comment_list.html',
+                controller: 'CommentListCtrl'
+            }).
+            otherwise({
+                redirectTo: '/'
+            });
+    }]);

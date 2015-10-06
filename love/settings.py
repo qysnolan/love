@@ -2,7 +2,8 @@
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+SITE_ROOT = os.path.abspath(os.path.join(os.path.dirname(
+    os.path.realpath(__file__)), ".."))
 
 
 # Quick-start development settings - unsuitable for production
@@ -32,6 +33,7 @@ INSTALLED_APPS = (
     'love',
     'menu',
     'photo',
+    'wedding',
 )
 
 REST_FRAMEWORK = {

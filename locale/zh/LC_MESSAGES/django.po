@@ -54,7 +54,7 @@ msgstr "婚礼信息"
 msgid "After 6 years, we are getting married!"
 msgstr "经过六年的爱情长跑，我们结婚啦！"
 #: templates/home.html:38
-msgid "Find Out More"
+msgid "Find out More"
 msgstr "了解更多"
 #: templates/home.html:74
 msgid "Learn More"
@@ -81,7 +81,7 @@ msgstr "中国天津"
 msgid "December 20th, 2015"
 msgstr "2015年12月20日"
 #: templates/home.html:182
-msgid "Leave A Message"
+msgid "Leave a Message"
 msgstr "送上祝福"
 #: templates/home.html:192
 msgid "How will our wedding look like?"
@@ -176,3 +176,36 @@ msgstr "如果你已经知道了这个网站的存在，也就应该知道我们
 #: templates/Base.html:115
 msgid "'If you know this website, you should know our Weibo already.'"
 msgstr "如果你已经知道了这个网站的存在，也就应该知道我们的微博啦。"
+#: templates/wedding.html:85
+msgid "Submit successfully!"
+msgstr "提交成功！"
+#: templates/wedding.html:92
+msgid "Please correct the error%(form.errors|pluralize)s below."
+msgstr "请更正下面%(form.errors|pluralize)个错误。"
+#: templates/wedding.html:99
+msgid "Your name:"
+msgstr "你的名字："
+#: templates/wedding.html:104
+msgid "Your blessing:"
+msgstr "祝福留言："
+#: templates/wedding.html:110
+msgid "Submit"
+msgstr "提交"
+#: templates/wedding.html:111
+msgid "Close"
+msgstr "关闭"
+#: templates/wedding.html:60
+msgid "Read All Messages"
+msgstr "读取所有祝福"
+#: templates/wedding.html:29
+msgid "Load more comments"
+msgstr "加载所有祝福"
+#: templates/wedding.html:30
+msgid "All comments are loaded"
+msgstr "所有祝福都已加载"
+#: templates/wedding.html:31
+msgid "Sorry, no comment is found..."
+msgstr "对不起，没有加载到祝福。。。"
+#: templates/wedding.html:32
+msgid "Loading comments..."
+msgstr "正在加载祝福中。。。"

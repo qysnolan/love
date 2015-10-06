@@ -43,5 +43,6 @@ router = ApiRouter()
 
 router.register(r"photos", views.PhotoViewSet)
 router.register(r"menus", views.MenuViewSet)
+router.register(r"comments", views.CommentViewSet)
 
 urlpatterns = router.urls
