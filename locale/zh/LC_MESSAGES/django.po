@@ -54,7 +54,7 @@ msgstr "婚礼信息"
 msgid "After 6 years, we are getting married!"
 msgstr "经过六年的爱情长跑，我们结婚啦！"
 #: templates/home.html:38
-msgid "Find Out More"
+msgid "Find out More"
 msgstr "了解更多"
 #: templates/home.html:74
 msgid "Learn More"
@@ -81,7 +81,7 @@ msgstr "中国天津"
 msgid "December 20th, 2015"
 msgstr "2015年12月20日"
 #: templates/home.html:182
-msgid "Leave A Message"
+msgid "Leave a Message"
 msgstr "送上祝福"
 #: templates/home.html:192
 msgid "How will our wedding look like?"
@@ -110,3 +110,102 @@ msgstr "主菜"
 #: templates/menu.html:20
 msgid "Dessert"
 msgstr "甜点"
+#: templates/photo.html:30
+msgid "Our Video"
+msgstr "我们的视频"
+#: templates/photo.html:44
+msgid "Youku"
+msgstr "优酷"
+#: templates/photo.html:45
+msgid "Youtube"
+msgstr "油管"
+#: templates/home.html:47
+msgid "To Love & To Cherish"
+msgstr "致爱情 & 致珍惜"
+#: templates/home.html:48
+msgid "There is no more lovely, friendly, charming relationship or company than a good marriage."
+msgstr "结婚不是从此只有两个人面对面，而是两个人牵手共同面对这个世界。"
+#: templates/menu.html:46
+msgid "Private Cuisine"
+msgstr "私房菜"
+#: templates/menu.html:47
+msgid "Simple not plain, delicate not complicated"
+msgstr "简约而不简单，精致而不复杂"
+#: templates/home.html:73
+msgid "This is the main page of our love and life."
+msgstr "这是我们爱情和生活的主页。"
+#: templates/home.html:86
+msgid "The location and date of our wedding and blessing from relatives and friends."
+msgstr "我们婚礼的时间和地点以及亲朋好友们的祝福。"
+#: templates/home.html:99
+msgid "All cherish memories of us."
+msgstr "这里包含了我们所有珍视的记忆。"
+#: templates/home.html:112
+msgid "The food we can make, the wine we can enjoy."
+msgstr "这里即有我们可以烹饪的美食，这里还有我们可以享用的美酒。"
+#: templates/photo.html:43
+msgid "Watch our WEDDING INTRO video."
+msgstr "观看我们婚礼的介绍视频"
+#: templates/photo.html:28
+msgid "Load more photos"
+msgstr "加载更多照片"
+#: templates/photo.html:29
+msgid "All photos are loaded"
+msgstr "所有照片都已加载"
+#: templates/photo.html:30
+msgid "Sorry, no photo is found..."
+msgstr "对不起，没有加载到照片。。。"
+#: templates/photo.html:31
+msgid "Loading photos..."
+msgstr "正在加载照片中。。。"
+#: templates/menu.html:31
+msgid "Loading data..."
+msgstr "正在加载数据中。。。"
+#: templates/Base.html:103
+msgid "'If you know this website, you should know our Facebook already.'"
+msgstr "如果你已经知道了这个网站的存在，也就应该知道我们的脸书啦。"
+#: templates/Base.html:106
+msgid "'If you know this website, you should know our Twitter already.'"
+msgstr "如果你已经知道了这个网站的存在，也就应该知道我们的推特啦。"
+#: templates/Base.html:109
+msgid "'If you know this website, you should know our Instagram already.'"
+msgstr "如果你已经知道了这个网站的存在，也就应该知道我们的Instagram啦。"
+#: templates/Base.html:112
+msgid "'If you know this website, you should know our Wechat already.'"
+msgstr "如果你已经知道了这个网站的存在，也就应该知道我们的微信啦。"
+#: templates/Base.html:115
+msgid "'If you know this website, you should know our Weibo already.'"
+msgstr "如果你已经知道了这个网站的存在，也就应该知道我们的微博啦。"
+#: templates/wedding.html:85
+msgid "Submit successfully!"
+msgstr "提交成功！"
+#: templates/wedding.html:92
+msgid "Please correct the error%(form.errors|pluralize)s below."
+msgstr "请更正下面%(form.errors|pluralize)个错误。"
+#: templates/wedding.html:99
+msgid "Your name:"
+msgstr "你的名字："
+#: templates/wedding.html:104
+msgid "Your blessing:"
+msgstr "祝福留言："
+#: templates/wedding.html:110
+msgid "Submit"
+msgstr "提交"
+#: templates/wedding.html:111
+msgid "Close"
+msgstr "关闭"
+#: templates/wedding.html:60
+msgid "Read All Messages"
+msgstr "读取所有祝福"
+#: templates/wedding.html:29
+msgid "Load more comments"
+msgstr "加载所有祝福"
+#: templates/wedding.html:30
+msgid "All comments are loaded"
+msgstr "所有祝福都已加载"
+#: templates/wedding.html:31
+msgid "Sorry, no comment is found..."
+msgstr "对不起，没有加载到祝福。。。"
+#: templates/wedding.html:32
+msgid "Loading comments..."
+msgstr "正在加载祝福中。。。"

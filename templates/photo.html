@@ -10,7 +10,32 @@
     <link rel="stylesheet" type="text/css" href="/static/css/photo.css" />
 {% endblock %}
 
+{% block page-js %}
+
+    <script src="/static/js/lib/angular.min.js"></script>
+    <script src="/static/js/lib/angular-cookies.min.js"></script>
+    <script src="/static/js/lib/angular-resource.min.js"></script>
+    <script src="/static/js/lib/angular-route.min.js"></script>
+
+    <!-- build:js /angular_apps/js/scripts.js -->
+    <script src="/static/app/app.js"></script>
+    <script src="/static/app/controllers/photo_controllers.js"></script>
+    <script src="/static/app/filters/photo_filters.js"></script>
+    <script src="/static/app/services/photo_services.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+        var load_more_photos = "{% trans "Load more photos" %}";
+        var all_photos_are_loaded = "{% trans "All photos are loaded" %}";
+        var no_photo_found = "{% trans "Sorry, no photo is found..." %}";
+        var loading_photos = "{% trans "Loading photos..." %}";
+    </script>
+{% endblock %}
+
 {% block navbar %}
+    <li>
+        <a href="#our_video" onclick = $("#menu-close").click(); >{% blocktrans %}Our Video{% endblocktrans %}</a>
+    </li>
     <li>
         <a href="#our_photos" onclick = $("#menu-close").click(); >{% blocktrans %}Our Photos{% endblocktrans %}</a>
     </li>
@@ -18,13 +43,13 @@
 
 {% block content %}
     <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
+    <aside id="our_video" class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-light">Look at Me!</a>
+                    <h3>{% blocktrans %}Watch our WEDDING INTRO video.{% endblocktrans %}</h3>
+                    <a href="#" class="btn btn-light"><i class="fa fa-video-camera"></i> {% trans "Youku" %}</a>
+                    <a href="#" class="btn btn-light"><i class="fa fa-youtube-play"></i> {% trans "Youtube" %}</a>
                 </div>
             </div>
         </div>
@@ -32,69 +57,8 @@
 
     <!-- Photo -->
     <section id="our_photos" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-1.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-1.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-2.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-2.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-3.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-3.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-4.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-4.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-5.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-5.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-7.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-7.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-8.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-8.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-9.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive" src="/static/img/photos/photo-9.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-10.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-10.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-11.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-11.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-12.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-12.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <a href="/static/img/photos/photo-13.jpg" data-lightbox="roadtrip" data-title="Click the right half of the image to move forward." class="thumbnail">
-                        <img class="img-portfolio img-responsive img-photo" src="/static/img/photos/photo-13.jpg" alt="">
-                    </a>
-                </div>
-            </div>
+        <div class="container" ng-app="photoApp">
+            <div ng-view></div>
         </div>
     </section>
 

@@ -12,11 +12,30 @@
 {% block page-js %}
     <script type="text/javascript" src="/static/js/wedding.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
+    <script src="/static/js/lib/angular.min.js"></script>
+    <script src="/static/js/lib/angular-cookies.min.js"></script>
+    <script src="/static/js/lib/angular-resource.min.js"></script>
+    <script src="/static/js/lib/angular-route.min.js"></script>
+
+    <!-- build:js /angular_apps/js/scripts.js -->
+    <script src="/static/app/app.js"></script>
+    <script src="/static/app/controllers/comment_controllers.js"></script>
+    <script src="/static/app/filters/comment_filters.js"></script>
+    <script src="/static/app/services/comment_services.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+        var load_more_comments = "{% trans "Load more comments" %}";
+        var all_comments_are_loaded = "{% trans "All comments are loaded" %}";
+        var no_comment_found = "{% trans "Sorry, no comment is found..." %}";
+        var loading_comments = "{% trans "Loading comments..." %}";
+    </script>
 {% endblock %}
 
 {% block navbar %}
     <li>
-        <a href="#leave_message" onclick = $("#menu-close").click(); >{% blocktrans %}Leave A Message{% endblocktrans %}</a>
+        <a href="#leave_message" onclick = $("#menu-close").click(); >{% blocktrans %}Leave a Message{% endblocktrans %}</a>
     </li>
     <li>
         <a href="#wedding_intro_video" onclick = $("#menu-close").click(); >{% blocktrans %}Intro Video{% endblocktrans %}</a>
@@ -34,26 +53,72 @@
             <h4>{% blocktrans %}Victoria International Hotel{% endblocktrans %} <br/> {% blocktrans %}Tientsin, China{% endblocktrans %} </h4>
             <h4>11:00 am <br/> {% blocktrans %}December 20th, 2015{% endblocktrans %}</h4>
             <br/>
-            <a href="#leave_message" class="btn btn-light">{% blocktrans %}Leave A Message{% endblocktrans %}</a>
+            <a href="#" class="btn btn-light" data-toggle="modal" data-target="#blessing_form"
+                           data-event-trigger="click" data-event-action="click">
+                    {% blocktrans %}Leave a Message{% endblocktrans %}
+            </a>
+            <a href="#leave_message" class="btn btn-light">{% blocktrans %}Read All Messages{% endblocktrans %}</a>
         </div>
     </section>
 
     <!-- Leave A Message -->
     <section id="leave_message" class="call-to-action bg-primary">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>{% blocktrans %}Best blessing from relatives and friends.{% endblocktrans %}</h2>
-                    <hr class="small">
-                    <p>XiaoMing: This theme features some wonderful photography courtesy of</p>
-                    <p>XiaoHua: This theme features some wonderful photography courtesy of. This theme features some wonderful photography courtesy of.</p>
-                    <p>XiaoHong: This theme features some wonderful photography courtesy of</p>
-                    <a href="#" class="btn btn-light">{% blocktrans %}Leave A Message{% endblocktrans %}</a>
-                    <a href="#" class="btn btn-light">{% blocktrans %}Read More{% endblocktrans %}</a>
+            <div class="text-center">
+                <h2>{% blocktrans %}Best blessing from relatives and friends.{% endblocktrans %}</h2>
+                <br/>
+                <div class="container" ng-app="commentApp">
+                    <div ng-view></div>
                 </div>
+                <a href="#" class="btn btn-light" data-toggle="modal" data-target="#blessing_form"
+                           data-event-trigger="click" data-event-action="click">
+                    {% blocktrans %}Leave a Message{% endblocktrans %}
+                </a>
             </div>
         </div>
     </section>
+
+    <div id="blessing_form" class="modal fade">
+        {% if is_submit %}
+            {% if form_valid %}
+                <p class="alert alert-success">
+                    {% blocktrans %}Submit successfully!{% endblocktrans %}
+                </p>
+            {% endif %}
+        {% endif %}
+
+        {% if form.errors %}
+            <p class="alert alert-danger">
+                {% blocktrans %}Please correct the error{{ form.errors|pluralize }} below.{% endblocktrans %}
+            </p>
+        {% endif %}
+
+        <form action="" method="post" class="basic-grey">
+            <label>
+                {{ form.your_name.errors }}
+                <span>{% blocktrans %}Your name:{% endblocktrans %}</span>
+                {{ form.your_name }}
+            </label>
+            <label class="field">
+                {{ form.blessing.errors }}
+                <span>{% blocktrans %}Your blessing:{% endblocktrans %}</span>
+                {{ form.blessing }}
+            </label>
+            <label>
+                <span>&nbsp;</span>
+                {% csrf_token %}
+                <input type="submit" class="button" value="{% trans "Submit" %}">
+                <button class="button" data-dismiss="modal">{% trans "Close" %}</button>
+            </label>
+        </form>
+    </div>
+    {% if is_submit %}
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $('#blessing_form').modal('toggle');
+        });
+        </script>
+    {% endif %}
 
     <!-- Wedding Intro Video -->
     <section id="wedding_intro_video" class="call-to-action">

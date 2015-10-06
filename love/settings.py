@@ -2,7 +2,8 @@
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+SITE_ROOT = os.path.abspath(os.path.join(os.path.dirname(
+    os.path.realpath(__file__)), ".."))
 
 
 # Quick-start development settings - unsuitable for production
@@ -28,9 +29,25 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'love',
     'menu',
+    'photo',
+    'wedding',
 )
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+    ),
+    "DEFAULT_FILTER_BACKENDS": (
+        "rest_framework.filters.DjangoFilterBackend",
+        "rest_framework.filters.SearchFilter",
+    ),
+    "PAGINATE_BY": 25,
+    "PAGINATE_BY_PARAM": "page_size",
+}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -41,6 +58,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
 )
 
 ROOT_URLCONF = 'love.urls'
@@ -84,6 +104,13 @@ DATABASES = {
 
 LANGUAGE_CODE = 'zh'
 
+ugettext = lambda s: s
+
+LANGUAGES = (
+    ('zh', ugettext('Chinese')),
+    ('en', ugettext('English')),
+)
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -97,6 +124,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Absolute filesystem path to the directory that will hold user-uploaded files.
+# Example: "/home/media/media.lawrence.com/media/"
+MEDIA_ROOT = SITE_ROOT + '/media/'
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash.
+# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+MEDIA_URL = '/media/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (

@@ -1,0 +1,28 @@
+<dl class="row">
+    <dd ng-repeat="comment in comments">
+        <div class="col-md-4">
+            <div class="bs-callout">
+                <h4>{{ comment.person_name }}</h4> <h6>{{ comment.last_update | date:'medium'}}</h6>
+                <p>{{ comment.comment }}</p>
+            </div>
+        </div>
+    </dd>
+</dl>
+
+<div class="center" ng-show="comments != null" >
+    <button class="btn btn-light" ng-show="allDataLoaded==true || totalPages==1" disabled>
+        {{ all_comments_are_loaded }}
+    </button>
+    <button class="btn btn-light" ng-show="next!=null" ng-click="loadComments(next)">
+        {{ load_more_comments }}
+    </button>
+    <button class="btn btn-light" ng-show="count == 0" disabled>
+        {{ no_comment_found }}
+    </button>
+</div>
+
+<div class="center" ng-show="comments==null || allDataLoading==true">
+    <h2>
+        <i class="fa fa-refresh fa-large fa-spin"></i> {{ loading_comments  }}
+    </h2>
+</div>
