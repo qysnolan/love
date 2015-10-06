@@ -1,12 +1,3 @@
-<div class="center" ng-show="photos != null" >
-    <button class="btn btn-dark btn-lg" ng-show="allDataLoaded==true || totalPages==1" disabled>
-        {{ all_photos_are_loaded }}
-    </button>
-    <button class="btn btn-dark btn-lg" ng-show="next!=null" ng-click="loadPhotos(next)">
-        {{ load_more_photos }}
-    </button>
-</div>
-
 <dl class="row">
     <dd ng-repeat="photo in photos" >
         <div class="col-sm-6 col-md-3">
